@@ -1,6 +1,10 @@
 import imaplib
 import email
-from credentials import MAIL, PASSWORD
+import getpass
+import sys
+
+MAIL = input("Enter your gmail address: ")
+PASSWORD = getpass.getpass(prompt="Enter your password: ")
 
 mail = imaplib.IMAP4_SSL(host="imap.gmail.com", port=993)
 try:
