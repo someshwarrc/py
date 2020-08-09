@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} Create a new post {% endblock %}
+{% block link %}
+<a href="/" class="navbar-brand"><i class="fas fa-feather"></i></a>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <form method="POST" action="/create/">
+            <div class="input-group">
+                <input type="text" class="form-control" name="title" placeholder="Title">
+            </div>
+            <br>
+            <div class="input-group">
+                <textarea class="form-control" name="body" rows="10" placeholder="Write something.."></textarea>
+            </div>
+            <br>
+            <button type="submit" action="submit" class="btn far fa-check-circle float-right" style="font-size:xx-large"></button>
+          </form>
+    </div>
+{% endblock %}
